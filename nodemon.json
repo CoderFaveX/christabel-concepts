@@ -1,0 +1,5 @@
+{
+    "ext": "mts,ts",
+    "exec": "tsx api/server.mts"
+  }
+  
