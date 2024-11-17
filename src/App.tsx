@@ -16,17 +16,18 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
+      <h1>Christabel Concepts</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
         <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
+          This website is currently under development.
         </p>
       </div>
       <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
+        <i>Dev:</i> <a href="https://favesportfolio.vercel.app">Favitech</a><br></br>
+        <i>Owner:</i> <a href="tel:+2348036844091">+234 803 684 4091</a>
       </p>
     </>
   )
