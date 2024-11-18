@@ -6,6 +6,7 @@ export default defineConfig({
   plugins: [react()],
   build: {
     outDir: "dist", // Output folder for Vercel
+    emptyOutDir: false
   },
   server: {
     proxy: {
