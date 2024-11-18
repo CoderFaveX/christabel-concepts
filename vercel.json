@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "dist/api/**/*.mjs",
+      "src": "dist/api/server.mjs",
       "use": "@vercel/node"
     },
     {
@@ -16,7 +16,7 @@
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "/dist/api/$1"
+      "dest": "/dist/api/server.mjs"
     },
     {
       "src": "/(.*)",
