@@ -12,7 +12,8 @@ app.use(cors());
 app.use(json());
 
 app.get("/", (req: express.Request, res: express.Response) => {
-  res.status(200).send({ msg: "hello" });
+  const requestType = req.query;
+  res.status(200).send({ msg: `Requesting ${requestType}` });
 });
 
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
