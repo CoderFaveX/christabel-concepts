@@ -10,8 +10,8 @@ const PORT: any = process.env.PORT || 3500;
 app.use(cors());
 app.use(json());
 
-app.get("/", (req: express.Request, res: express.Response) => {
-  const requestType = req.query;
+app.get("/api/req", (req: express.Request, res: express.Response) => {
+  const requestType = req.hostname;
   res.status(200).send({ msg: `Requesting ${requestType}` });
 });
 

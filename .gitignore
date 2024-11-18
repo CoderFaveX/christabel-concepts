@@ -10,6 +10,7 @@ lerna-debug.log*
 node_modules
 dist
 compile.bat
+nodemon.json
 dist-ssr
 *.local
 

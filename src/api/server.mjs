@@ -6,8 +6,8 @@ dotenv.config();
 const PORT = process.env.PORT || 3500;
 app.use(cors());
 app.use(json());
-app.get("/", (req, res) => {
-    const requestType = req.query;
+app.get("/api/req", (req, res) => {
+    const requestType = req.hostname;
     res.status(200).send({ msg: `Requesting ${requestType}` });
 });
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
