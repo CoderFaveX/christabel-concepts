@@ -6,7 +6,7 @@ dotenv.config();
 const PORT = process.env.PORT || 3500;
 app.use(cors());
 app.use(json());
-app.get("/", (req, res) => {
+app.get("/api/req", (req, res) => {
     const requestType = req.query;
     res.status(200).send({ msg: `Requesting ${requestType}` });
 });
