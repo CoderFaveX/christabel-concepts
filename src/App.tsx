@@ -1,36 +1,55 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import MainLayout from './components/Layouts/MainLayout';
+import AuthLayout from './components/Layouts/AuthLayout';
+import AdminLayout from './components/Layouts/AdminLayout';
+import ProtectedRoute from './components/ProtectedRoute';
+
+import Home from './pages/Home';
+import About from './pages/About';
+import Properties from './pages/Properties';
+import Blog from './pages/Blog';
+import ContactUs from './pages/ContactUs';
+import Register from './pages/Register';
+import Login from './pages/Login';
+import ShopServices from './pages/ShopServices';
+import Admin from './pages/Admin';
+
+import './css/App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Christabel Concepts</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          This website is currently under development.
-        </p>
-      </div>
-      <p className="read-the-docs">
-        <i>Dev:</i> <a href="https://favesportfolio.vercel.app">Favitech</a><br></br>
-        <i>Owner:</i> <a href="tel:+2348036844091">+234 803 684 4091</a>
-      </p>
-    </>
-  )
+    <Router>
+      <Routes>
+        {/* Public Routes */}
+        <Route path="/" element={<MainLayout />}>
+          <Route index element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="properties" element={<Properties />} />
+          <Route path="blog" element={<Blog />} />
+          <Route path="contact-us" element={<ContactUs />} />
+          <Route path="shop-services" element={<ShopServices />} />
+        </Route>
+
+        {/* Auth Routes */}
+        <Route path="/" element={<AuthLayout />}>
+          <Route path="register" element={<Register />} />
+          <Route path="login" element={<Login />} />
+        </Route>
+
+        {/* Protected Routes */}
+        <Route
+          path="/admin"
+          element={
+            <ProtectedRoute>
+              <AdminLayout />
+            </ProtectedRoute>
+          }
+        >
+          <Route index element={<Admin />} />
+        </Route>
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;

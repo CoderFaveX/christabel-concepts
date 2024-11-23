@@ -1,0 +1,20 @@
+$font: "Poppins", sans-serif;
+$accent-color: #cfb579;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@mixin flex($al, $js) {
+  display: flex;
+  align-items: $al;
+  justify-content: $js;
+}
+
+@mixin media($px) {
+  @media screen and (max-width: $px) {
+    @content;
+  }
+}

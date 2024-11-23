@@ -1,0 +1,112 @@
+@import "./presets";
+
+.NavBar {
+  @include flex(center, space-between);
+  padding: 0rem 4rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999 !important;
+  background: #FFF;
+  .logoContainer {
+    width: 250px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .links {
+    @include flex(center, space-between);
+    list-style: none;
+    li {
+      margin: 0 1rem;
+      a {
+        color: #333;
+        text-decoration: none;
+        font-size: 15px;
+        transition: 0.2s linear;
+        &:hover {
+          color: $accent-color;
+        }
+      }
+    }
+  }
+  .auth {
+    @include flex(center, center);
+  }
+  .auth button {
+    border: 0;
+    outline: 0;
+    background: $accent-color;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: 0.2s linear;
+    &:hover {
+      background-color: darken($accent-color, 10%);
+    }
+  }
+  .hamMenu {
+    display: none;
+    margin: 0 1rem;
+    color: #333;
+  }
+  * {
+    font-family: $font;
+  }
+  @include media(1024px) {
+    padding: 0.7rem 2rem;
+  }
+  @include media(950px) {
+    padding: 0rem 1rem;
+  }
+  @include media(915px) {
+    padding: 0 3rem;
+    .hamMenu {
+      display: block;
+    }
+    .links {
+      z-index: 9999 !important;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 0);
+      top: 122px;
+      width: calc(100% - 6rem);
+      flex-direction: column;
+      max-height: 0px;
+      overflow: hidden;
+      transition: max-height .3s linear;
+      li {
+        background-color: darken($accent-color, 10%);
+        width: 100%;
+        color: #fff;
+        text-align: center;
+        padding: .4rem 0;
+        border-bottom: 1px solid #bbbbbb60;
+        a { color: #FFF; }
+      }
+    }
+    .nav-open {
+      max-height: 400px;
+    }
+  }
+  @include media(530px) {
+    padding: 0 1rem;
+    .logoContainer {
+      width: 200px;
+    }
+    .links {
+      width: calc(100% - 2rem);
+      top: 100px;
+    }
+  }
+}
+
+.visible {
+  animation: slideIn .7s ease-in-out;
+  @keyframes slideIn {
+    0% { top: -50%; }
+    100% { top: 0%; }
+  }
+}

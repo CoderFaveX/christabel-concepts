@@ -1,0 +1,68 @@
+@import "./presets";
+
+header {
+    display: grid;
+    place-content: center;
+    #bgVid {
+    position: absolute;
+    top: -20vh;
+    right: 0;
+    height: 120vh;
+    z-index: -9999 !important;
+  }
+  padding-top: 8rem;
+  color: #bdbbbb;
+  .description {
+    width: 500px;
+    margin: 3rem 0 0 0rem;
+    p:nth-child(1) {
+        font-style: italic;
+        font-weight: 500;
+        margin: .4rem 0;
+    }
+    h1 {
+        font-weight: 500;
+        font-size: 40px;
+        margin: .3rem 0;
+    }
+    &-text {
+        font-weight: 400;
+        font-size: 14px !important;
+    }
+  }
+  button {
+    border: 0;
+    outline: 0;
+    background: $accent-color;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: 0.2s linear;
+    font-family: $font;
+    margin: 1rem 0;
+    &:hover {
+      background-color: darken($accent-color, 10%);
+    }
+  }
+  @include media(655px) {
+    .description {
+        margin-top: 5rem;
+        h1 { font-size: 25px; }
+        p { font-size: 13px; }
+    }
+  }
+  @include media(550px) {
+    .description { width: 95%; margin: 5rem auto; }
+  }
+
+  @include media(400px) {
+    button {
+        float: right;
+        transform: translate(0, -30px);
+    }
+    #bgVid {
+        height: 100vh;
+        top: 0vh;
+    }
+  }
+}

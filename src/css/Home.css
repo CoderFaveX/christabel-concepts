@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: grid;
+  place-content: center;
+  padding-top: 8rem;
+  color: #bdbbbb;
+}
+header #bgVid {
+  position: absolute;
+  top: -20vh;
+  right: 0;
+  height: 120vh;
+  z-index: -9999 !important;
+}
+header .description {
+  width: 500px;
+  margin: 3rem 0 0 0rem;
+}
+header .description p:nth-child(1) {
+  font-style: italic;
+  font-weight: 500;
+  margin: 0.4rem 0;
+}
+header .description h1 {
+  font-weight: 500;
+  font-size: 40px;
+  margin: 0.3rem 0;
+}
+header .description-text {
+  font-weight: 400;
+  font-size: 14px !important;
+}
+header button {
+  border: 0;
+  outline: 0;
+  background: #cfb579;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: 0.2s linear;
+  font-family: "Poppins", sans-serif;
+  margin: 1rem 0;
+}
+header button:hover {
+  background-color: #c2a053;
+}
+@media screen and (max-width: 655px) {
+  header .description {
+    margin-top: 5rem;
+  }
+  header .description h1 {
+    font-size: 25px;
+  }
+  header .description p {
+    font-size: 13px;
+  }
+}
+@media screen and (max-width: 550px) {
+  header .description {
+    width: 95%;
+    margin: 5rem auto;
+  }
+}
+@media screen and (max-width: 400px) {
+  header button {
+    float: right;
+    transform: translate(0, -30px);
+  }
+  header #bgVid {
+    height: 100vh;
+    top: 0vh;
+  }
+}/*# sourceMappingURL=Home.css.map */
