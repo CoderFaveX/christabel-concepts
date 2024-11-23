@@ -1,9 +1,9 @@
 @import "./presets";
 
 header {
-    display: grid;
-    place-content: center;
-    #bgVid {
+  display: grid;
+  place-content: center;
+  #bgVid {
     position: absolute;
     top: -20vh;
     right: 0;
@@ -12,22 +12,23 @@ header {
   }
   padding-top: 8rem;
   color: #bdbbbb;
+  margin-bottom: 10rem;
   .description {
     width: 500px;
     margin: 3rem 0 0 0rem;
     p:nth-child(1) {
-        font-style: italic;
-        font-weight: 500;
-        margin: .4rem 0;
+      font-style: italic;
+      font-weight: 500;
+      margin: 0.4rem 0;
     }
     h1 {
-        font-weight: 500;
-        font-size: 40px;
-        margin: .3rem 0;
+      font-weight: 500;
+      font-size: 40px;
+      margin: 0.3rem 0;
     }
     &-text {
-        font-weight: 400;
-        font-size: 14px !important;
+      font-weight: 400;
+      font-size: 14px !important;
     }
   }
   button {
@@ -46,23 +47,33 @@ header {
   }
   @include media(655px) {
     .description {
-        margin-top: 5rem;
-        h1 { font-size: 25px; }
-        p { font-size: 13px; }
+      margin-top: 5rem;
+      text-align: center;
+      h1 {
+        font-size: 25px;
+      }
+      p {
+        font-size: 13px;
+      }
+    }
+    button {
+      transform: translate(0, -15px);
     }
   }
   @include media(550px) {
-    .description { width: 95%; margin: 5rem auto; }
+    .description {
+      width: 95%;
+      margin: 5rem auto;
+    }
   }
 
   @include media(400px) {
     button {
-        float: right;
-        transform: translate(0, -30px);
+      float: right;
     }
     #bgVid {
-        height: 100vh;
-        top: 0vh;
+      height: 100vh;
+      top: 0vh;
     }
   }
 }

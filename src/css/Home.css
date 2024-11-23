@@ -9,6 +9,7 @@ header {
   place-content: center;
   padding-top: 8rem;
   color: #bdbbbb;
+  margin-bottom: 10rem;
 }
 header #bgVid {
   position: absolute;
@@ -52,12 +53,16 @@ header button:hover {
 @media screen and (max-width: 655px) {
   header .description {
     margin-top: 5rem;
+    text-align: center;
   }
   header .description h1 {
     font-size: 25px;
   }
   header .description p {
     font-size: 13px;
+  }
+  header button {
+    transform: translate(0, -15px);
   }
 }
 @media screen and (max-width: 550px) {
@@ -69,7 +74,6 @@ header button:hover {
 @media screen and (max-width: 400px) {
   header button {
     float: right;
-    transform: translate(0, -30px);
   }
   header #bgVid {
     height: 100vh;
