@@ -18,3 +18,17 @@ $accent-color: #cfb579;
     @content;
   }
 }
+
+@mixin button {
+  border: 0;
+  outline: 0;
+  background: $accent-color;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: 0.2s linear;
+  font-family: $font;
+  &:hover {
+    background-color: darken($accent-color, 10%);
+  }
+}

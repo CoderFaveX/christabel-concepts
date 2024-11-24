@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -78,5 +79,113 @@ header button:hover {
   header #bgVid {
     height: 100vh;
     top: 0vh;
+  }
+}
+@media screen and (max-width: 340px) {
+  header #bgVid {
+    height: 90vh;
+    top: 10vh;
+  }
+}
+
+.introSlide {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #eee;
+}
+.introSlide .imgTact {
+  width: 100%;
+}
+.introSlide .imgTact img {
+  width: 100%;
+  height: 100%;
+}
+.introSlide .description {
+  color: #333;
+  padding: 1rem 4rem;
+}
+.introSlide .description h1 {
+  font-size: 35px;
+  margin: 0.3rem 0;
+}
+.introSlide .description h1::after {
+  content: "";
+  display: block;
+  background: #c2a053;
+  height: 2px;
+  width: 100px;
+  margin: 0.7rem 0;
+}
+.introSlide .description p {
+  font-size: 14px;
+  margin: 1rem 0;
+}
+.introSlide .description ul {
+  list-style: none;
+}
+.introSlide .description ul > li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0;
+  font-size: 14px;
+}
+.introSlide .description ul > li::before {
+  content: "•";
+  color: #a6863c;
+  font-size: 1.2em;
+}
+.introSlide .description ul > li svg {
+  color: #c2a053;
+  margin: 0 0.5rem;
+}
+.introSlide .description ul > li span > b {
+  font-weight: 500;
+}
+.introSlide .description button {
+  border: 0;
+  outline: 0;
+  background: #cfb579;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: 0.2s linear;
+  font-family: "Poppins", sans-serif;
+}
+.introSlide .description button:hover {
+  background-color: #c2a053;
+}
+@media screen and (max-width: 1250px) {
+  .introSlide .description h1 {
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 1075px) {
+  .introSlide {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-image: url(../assets/man-on-laptop.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(44, 28, 28, 0.8549019608);
+    background-blend-mode: overlay;
+  }
+  .introSlide .description {
+    color: #ccc;
+  }
+  .introSlide .description ul > li {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .introSlide .imgTact {
+    display: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  .introSlide .description {
+    padding: 1rem 2rem;
   }
 }/*# sourceMappingURL=Home.css.map */
