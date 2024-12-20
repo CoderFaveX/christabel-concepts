@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
-import logoTitle from "../assets/logo-title.jpg";
+import logoTitle from "../assets/logo-title.png";
 import logoMain from "../assets/logo.png";
 import "../css/NavBar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

@@ -7,12 +7,10 @@ header {
     position: absolute;
     top: -20vh;
     right: 0;
-    height: 120vh;
     z-index: -9999 !important;
   }
   padding-top: 8rem;
   color: #bdbbbb;
-  margin-bottom: 10rem;
   .description {
     width: 500px;
     margin: 3rem 0 0 0rem;
@@ -34,6 +32,7 @@ header {
   button {
     @include button;
     margin: 1rem 0;
+    background-color: $accent-color;
   }
   @include media(655px) {
     .description {
@@ -46,9 +45,6 @@ header {
         font-size: 13px;
       }
     }
-    button {
-      transform: translate(0, -15px);
-    }
   }
   @include media(550px) {
     .description {
@@ -58,9 +54,6 @@ header {
   }
 
   @include media(400px) {
-    button {
-      float: right;
-    }
     #bgVid {
       height: 100vh;
       top: 0vh;
@@ -77,6 +70,8 @@ header {
 .introSlide {
   @include flex(center, space-between);
   background: #eee;
+  margin-top: 20rem;
+  padding-top: 7rem;
   .imgTact {
     width: 100%;
     img {
@@ -138,14 +133,7 @@ header {
     flex-direction: column-reverse;
     align-items: flex-start;
     justify-content: flex-start;
-    background-image: url(../assets/man-on-laptop.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: #2c1c1cda;
-    background-blend-mode: overlay;
     .description {
-      color: #ccc;
       ul > li {
         align-items: flex-start;
         justify-content: flex-start;
@@ -159,5 +147,8 @@ header {
     .description {
       padding: 1rem 2rem;
     }
+  }
+  @include media(400px) {
+    margin-top: 0rem !important;
   }
 }

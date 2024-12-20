@@ -10,13 +10,11 @@ header {
   place-content: center;
   padding-top: 8rem;
   color: #bdbbbb;
-  margin-bottom: 10rem;
 }
 header #bgVid {
   position: absolute;
   top: -20vh;
   right: 0;
-  height: 120vh;
   z-index: -9999 !important;
 }
 header .description {
@@ -40,16 +38,17 @@ header .description-text {
 header button {
   border: 0;
   outline: 0;
-  background: #cfb579;
+  background: #8c52ff;
   color: #fff;
   padding: 0.5rem 1rem;
   cursor: pointer;
   transition: 0.2s linear;
   font-family: "Poppins", sans-serif;
   margin: 1rem 0;
+  background-color: #8c52ff;
 }
 header button:hover {
-  background-color: #c2a053;
+  background-color: #6a1fff;
 }
 @media screen and (max-width: 655px) {
   header .description {
@@ -62,9 +61,6 @@ header button:hover {
   header .description p {
     font-size: 13px;
   }
-  header button {
-    transform: translate(0, -15px);
-  }
 }
 @media screen and (max-width: 550px) {
   header .description {
@@ -73,9 +69,6 @@ header button:hover {
   }
 }
 @media screen and (max-width: 400px) {
-  header button {
-    float: right;
-  }
   header #bgVid {
     height: 100vh;
     top: 0vh;
@@ -93,6 +86,8 @@ header button:hover {
   align-items: center;
   justify-content: space-between;
   background: #eee;
+  margin-top: 20rem;
+  padding-top: 7rem;
 }
 .introSlide .imgTact {
   width: 100%;
@@ -112,7 +107,7 @@ header button:hover {
 .introSlide .description h1::after {
   content: "";
   display: block;
-  background: #c2a053;
+  background: #6a1fff;
   height: 2px;
   width: 100px;
   margin: 0.7rem 0;
@@ -133,11 +128,11 @@ header button:hover {
 }
 .introSlide .description ul > li::before {
   content: "•";
-  color: #a6863c;
+  color: #4f00eb;
   font-size: 1.2em;
 }
 .introSlide .description ul > li svg {
-  color: #c2a053;
+  color: #6a1fff;
   margin: 0 0.5rem;
 }
 .introSlide .description ul > li span > b {
@@ -146,7 +141,7 @@ header button:hover {
 .introSlide .description button {
   border: 0;
   outline: 0;
-  background: #cfb579;
+  background: #8c52ff;
   color: #fff;
   padding: 0.5rem 1rem;
   cursor: pointer;
@@ -154,7 +149,7 @@ header button:hover {
   font-family: "Poppins", sans-serif;
 }
 .introSlide .description button:hover {
-  background-color: #c2a053;
+  background-color: #6a1fff;
 }
 @media screen and (max-width: 1250px) {
   .introSlide .description h1 {
@@ -166,15 +161,6 @@ header button:hover {
     flex-direction: column-reverse;
     align-items: flex-start;
     justify-content: flex-start;
-    background-image: url(../assets/man-on-laptop.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: rgba(44, 28, 28, 0.8549019608);
-    background-blend-mode: overlay;
-  }
-  .introSlide .description {
-    color: #ccc;
   }
   .introSlide .description ul > li {
     align-items: flex-start;
@@ -187,5 +173,10 @@ header button:hover {
 @media screen and (max-width: 480px) {
   .introSlide .description {
     padding: 1rem 2rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  .introSlide {
+    margin-top: 0rem !important;
   }
 }/*# sourceMappingURL=Home.css.map */

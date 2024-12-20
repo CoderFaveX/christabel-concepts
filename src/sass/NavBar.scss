@@ -9,6 +9,7 @@
   width: 100%;
   z-index: 9999 !important;
   background: #FFF;
+  border-bottom: 1px solid #917d3c;
   .logoContainer {
     width: 250px;
     img {
@@ -68,6 +69,7 @@
       max-height: 0px;
       overflow: hidden;
       transition: max-height .3s linear;
+      box-shadow: 0 0 10px #8a8a8a;
       li {
         background-color: darken($accent-color, 10%);
         width: 100%;
