@@ -9,7 +9,7 @@
   width: 100%;
   z-index: 9999 !important;
   background: #FFF;
-  border-bottom: 1px solid #917d3c;
+  box-shadow: 0 0 5px lighten($accent-color, 10%);
   .logoContainer {
     width: 250px;
     img {
@@ -71,7 +71,7 @@
       transition: max-height .3s linear;
       box-shadow: 0 0 10px #8a8a8a;
       li {
-        background-color: darken($accent-color, 10%);
+        background-color: $accent-color;
         width: 100%;
         color: #fff;
         text-align: center;

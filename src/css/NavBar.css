@@ -15,7 +15,7 @@
   width: 100%;
   z-index: 9999 !important;
   background: #FFF;
-  border-bottom: 1px solid #917d3c;
+  box-shadow: 0 0 5px #9f89cc;
 }
 .NavBar .logoContainer {
   width: 250px;
@@ -40,7 +40,7 @@
   transition: 0.2s linear;
 }
 .NavBar .links li a:hover {
-  color: #8c52ff;
+  color: #8265bd;
 }
 .NavBar .auth {
   display: flex;
@@ -50,7 +50,7 @@
 .NavBar .auth button {
   border: 0;
   outline: 0;
-  background: #8c52ff;
+  background: #8265bd;
   color: #fff;
   padding: 0.5rem 1rem;
   cursor: pointer;
@@ -58,7 +58,7 @@
   font-family: "Poppins", sans-serif;
 }
 .NavBar .auth button:hover {
-  background-color: #6a1fff;
+  background-color: #6748a7;
 }
 .NavBar .hamMenu {
   display: none;
@@ -99,7 +99,7 @@
     box-shadow: 0 0 10px #8a8a8a;
   }
   .NavBar .links li {
-    background-color: #6a1fff;
+    background-color: #8265bd;
     width: 100%;
     color: #fff;
     text-align: center;

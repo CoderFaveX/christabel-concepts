@@ -1,13 +1,18 @@
 import "../css/Home.css";
 import bgVid from "../assets/bg.mp4";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import manOnLaptop from "../assets/man-on-laptop.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
+  faArrowRight,
   faCheckToSlot,
+  faCompassDrafting,
+  faMoneyCheckDollar,
   faPenRuler,
+  faPlaneCircleCheck,
   faShip,
 } from "@fortawesome/free-solid-svg-icons";
+import { faSearchengin } from "@fortawesome/free-brands-svg-icons";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -52,19 +57,77 @@ const Home = () => {
             <li>
               <FontAwesomeIcon icon={faCheckToSlot} />
               <span>
-                <b>Expertise You Can Trust</b>: Years of experience ensuring smooth
-                transactions for buying, selling, and leasing properties.
+                <b>Expertise You Can Trust</b>: Years of experience ensuring
+                smooth transactions for buying, selling, and leasing properties.
               </span>
             </li>
             <li>
               <FontAwesomeIcon icon={faPenRuler} />
               <span>
-                <b>Commitment to Excellence</b>: Delivering reliable, professional, and
-                results-driven services with your satisfaction as our priority.
+                <b>Commitment to Excellence</b>: Delivering reliable,
+                professional, and results-driven services with your satisfaction
+                as our priority.
               </span>
             </li>
           </ul>
           <button onClick={() => navigate("/about")}>Learn More</button>
+        </div>
+      </section>
+      <section className="about">
+        <h1>Our Passion Is People, What's Yours?</h1>
+        <div className="items">
+          <div className="item">
+            <p className="icon">
+              <FontAwesomeIcon icon={faCompassDrafting} />
+            </p>
+            <p className="heading">Creative Design</p>
+            <p className="description">
+              Our creative design blends innovation and aesthetics to craft
+              visually stunning and functional spaces.
+            </p>
+            <Link to={"/properties"}>
+              See more <FontAwesomeIcon icon={faArrowRight} />
+            </Link>
+          </div>
+          <div className="item">
+            <p className="icon">
+              <FontAwesomeIcon icon={faPlaneCircleCheck} />
+            </p>
+            <p className="heading">Experience Style</p>
+            <p className="description">
+              Discover quality crafted with elegance, delivering an experience
+              that's as stylish as it is unforgettable.
+            </p>
+            <Link to={"/properties"}>
+              See more <FontAwesomeIcon icon={faArrowRight} />
+            </Link>
+          </div>
+          <div className="item">
+            <p className="icon">
+              <FontAwesomeIcon icon={faSearchengin} />
+            </p>
+            <p className="heading">Product Research</p>
+            <p className="description">
+              Delve into insights and innovation, ensuring every product
+              reflects quality, purpose, and style.
+            </p>
+            <Link to={"/properties"}>
+              See more <FontAwesomeIcon icon={faArrowRight} />
+            </Link>
+          </div>
+          <div className="item">
+            <p className="icon">
+              <FontAwesomeIcon icon={faMoneyCheckDollar} />
+            </p>
+            <p className="heading">Affordable Price</p>
+            <p className="description">
+              Experience exceptional quality and thoughtful design, all crafted
+              to deliver unmatched value at an affordable price.
+            </p>
+            <Link to={"/properties"}>
+              See more <FontAwesomeIcon icon={faArrowRight} />
+            </Link>
+          </div>
         </div>
       </section>
     </>
